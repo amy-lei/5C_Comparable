@@ -31,6 +31,17 @@ public class UserOfComparability {
         // Date vs itself
         Date d0 = new Date(2001,5,12);
         reportRelationship( "Date vs. itself", d0, d0, "0");
+        // Date vs closer date
+        reportRelationship( "Date vs. closer", d0, new Date(1990, 5, 12), "negative int");
+        // Date vs further date
+        reportRelationship( "Date vs. further", d0, new Date(2020, 10, 11), "negative int");
+
+        // // Dog vs dog?
+        // IncomparableDog doggo = new IncomparableDogDog();
+        // reportRelationship( "Dog vs. dog?", doggo, doggo, "negative int");
+        
+        // // Date vs point?
+        // reportRelationship( "Date vs. Point?", d0, p0, "negative int");
     }
 
 

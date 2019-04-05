@@ -12,9 +12,12 @@ public class Point implements Comparable{
       by the parameter.
      */
     public int compareTo( Object otherObj){
+        /* cast into Point */
+        Point other = (Point)otherObj;
+        
         /* compare the distance squared of the two */
         int thisDist = (int)(xcor * xcor + ycor * ycor);
-        int otherDist = (int)(otherObj.xcor * otherObj.xcor + otherObj.ycor * otherObj.ycor);
+        int otherDist = (int)(other.getXcor() * other.getXcor() + other.getYcor() * other.getYcor());
         return thisDist - otherDist;
     }
 
